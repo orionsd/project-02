@@ -6,8 +6,10 @@ var  packages = [ { image: "img/prod-item-01.png", span: "СТАНДАРТНЫЙ
                   { image: "img/prod-item-03.png", span: "РАЗРАБОТОК", time: "10"}, 
                   { image: "img/prod-item-03.png", span: "РАЗРАБОТОК", time: "10"}  ];
 
+
 function getrandomIndex(max, count) {
-  var arr = []; 
+    var arr = [];
+
    for (var j = 0; j<count;) 
    {
          var k = Math.random()*max;
@@ -21,7 +23,6 @@ function getrandomIndex(max, count) {
    }
   return arr;
 }
-
 /*  main-products*/
 
 function createBlocks(number) { 
@@ -53,7 +54,7 @@ function createBlocks(number) {
 function modifyBlock(block_num,random_number){
 
     var i = random_number;
-    var block = arr_block[block_num]
+    var block = arr_block[block_num];
 
     var block_img =  document.getElementsByClassName("main-products__item-img")[block_num];
     var block_name =  document.getElementsByClassName("main-products__item-name")[block_num];
@@ -65,10 +66,12 @@ function modifyBlock(block_num,random_number){
 }
 
 var arr_block = [];
-function launch()
 
+
+function launch()
 { 
     var arr_m = getrandomIndex(4, 3);
+
     for (var l = 0; l < arr_m.length; l++) 
     {
         if(arr_block.length > 2){modifyBlock(l,arr_m[l]);}
@@ -79,7 +82,4 @@ function launch()
 launch();
 
 setInterval(launch, 2000);
-
-
-       
 

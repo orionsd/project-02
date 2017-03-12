@@ -791,17 +791,24 @@ li {
     border-radius: 50%;
   }
 
+  &__item a:first-child {
+    color: #ed1b2f;
+    text-decoration: underline;
+  }
+
   &__link {
     color: #7d8b92;
     font-size: 1.07rem;
     font-weight: normal;
   }
 
-  &__link_active {
-    color: #ed1b2f;
-    text-decoration: underline;
-  }
+
+
+
 }
+
+
+
 
 .aside, .categ-main {
   /*  min-height: 100%;*/
