@@ -1,7 +1,5 @@
 var aside_nav = document.querySelector('.aside-nav');
 
-console.log(aside_nav);
-
 var links = [{name: "Стандартный пакет"},
     {name: "Новый ЦФТ-Банк"},
     {name: "Cash Management"},
