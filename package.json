@@ -1,0 +1,22 @@
+{
+  "name": "project-02",
+  "version": "1.0.0",
+  "description": "money transfer javascript\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C",
+  "main": "\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001bapp\u001b[C\u001b\u001b[C\u001b[C\u001b[C\u001bapp.js\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C",
+  "scripts": {
+    "test": "\u001b[D\u001b[C\u001b[D\u001b[C"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orionsd/project-02.git"
+  },
+  "author": "Taziev Rodion",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orionsd/project-02/issues"
+  },
+  "homepage": "https://github.com/orionsd/project-02#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8"
+  }
+}
