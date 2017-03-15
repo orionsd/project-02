@@ -763,11 +763,13 @@ li {
 
 .slider__arrow-next {
   right: -30px;
-  background: url("../img/arrow-next.png") no-repeat; }
+  background: url("../img/arrow-next.png") no-repeat;
+  cursor: pointer; }
 
 .slider__arrow-prev {
   left: -30px;
-  background: url("../img/arrow-prev.png") no-repeat; }
+  background: url("../img/arrow-prev.png") no-repeat;
+  cursor: pointer; }
 
 .circles {
   position: absolute;
@@ -792,7 +794,8 @@ li {
   width: 12px;
   height: 12px;
   background: gray;
-  border-radius: 50%; }
+  border-radius: 50%;
+  cursor: pointer; }
 
 .crl-active {
   background: red; }

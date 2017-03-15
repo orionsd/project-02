@@ -86,8 +86,8 @@ btn_next.onclick = function () {
         slider_move.style.left = hor - slide_width + "px";
         console.log(parseInt(slider_move.style.left));
     }
-};
 
+};
 
 btn_prev.onclick = function () {
 
@@ -95,11 +95,19 @@ btn_prev.onclick = function () {
     if ((parseInt(slider_move.style.left)) < 0) {
         slider_move.style.left = hor + slide_width + "px";
     }
+
     console.log(parseInt(slider_move.style.left));
 };
 
 
+
+
+
+
+
+
 circle_btn_02.onclick = function () {
+
     slider_move.style.left = (slide_width) * 0 + "px";
     circle_toggle();
     this.classList.add("crl-active");
@@ -130,11 +138,10 @@ circle_btn_05.onclick = function () {
     circle_toggle();
     this.classList.add("crl-active");
     console.log(parseInt(slider_move.style.left));
+
 };
 
-
 var circle_items = [circle_btn_02, circle_btn_03, circle_btn_04, circle_btn_05];
-
 
 function circle_toggle() {
 
@@ -143,11 +150,21 @@ function circle_toggle() {
         console.log(circle_items[i].className);
 
     }
-
 }
 
 /*console.log(btn_next);*/
 
 
+    /*Ajax*/
 
+
+    var xhr = newXMLHttpRequest();
+    xhr.open("GET", "api/app_packages.json", true);
+    xhr.send();
+
+    xhr.onload = function() {
+
+
+
+    };
 
