@@ -16,7 +16,6 @@ $gray: #9fa3a7;
 
 body, html {
   height: 100%;
-
 }
 
 body {
@@ -278,7 +277,10 @@ li {
   }
 
   &__paypal {
+    display: inline-block;
+    vertical-align: top;
     margin-right: -4px;
+    margin-top: -3px;
     padding: 5px 14px;
     font-size: 0.75rem;
     letter-spacing: 2.4px;
@@ -613,6 +615,7 @@ li {
   width: 224px;
   height: 32px;
   padding: 0 15px;
+  padding-right: 40px;
   border-radius: 50px;
   background-color: #ffffff;
   border: solid 1px #d9d9d9;
@@ -882,6 +885,10 @@ li {
   &__c04 {
     width: 113px;
   }
+}
+
+.categ-table tr:nth-child(2n) {
+  background: #f7f7f7;
 }
 
 .full-height {

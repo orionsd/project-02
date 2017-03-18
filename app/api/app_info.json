@@ -1,0 +1,14 @@
+[
+
+{  
+
+	"id": 1,
+	"title": "Новый ЦФТ Банк",
+    "lastUpdate": 1333843200, 
+    "guid": "979fd423-31f5-43a5-8509-9e5c493d5322",
+    "description": "text",
+    "requirments": "text",
+    "features": ["feature one", "feature two"]
+ }
+
+]
