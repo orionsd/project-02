@@ -55,20 +55,24 @@ function insertBlock(i, apps) {
         block_date.classList.add("main-products__item-date");
         var date = apps[i].lastUpdate;
 
-        block_date.innerHTML = timeConverter(date);
 
-
-        function timeConverter(lastUpdate) {
-            var a = new Date(lastUpdate * 1000);
-            var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-            var year = a.getFullYear();
-            var month = months[a.getMonth()];
-            var date = a.getDate();
-            var time = date + ' ' + month + ' ' + year + ' ';
-            return time;
-        }
 
     }
+
+
+    block_date.innerHTML = timeConverter(date);
+
+
+    function timeConverter(lastUpdate) {
+        var a = new Date(lastUpdate * 1000);
+        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        var year = a.getFullYear();
+        var month = months[a.getMonth()];
+        var date = a.getDate();
+        var time = date + ' ' + month + ' ' + year + ' ';
+        return time;
+    }
+
 };
 
 /*Slider*/

@@ -129,9 +129,8 @@ function insertBlock_app(i) {
         app_price.classList.add("app-main__price");
         app_price.innerHTML = apps[i].price + "$";
 
-           app_main.appendChild(app_mfunctions);
-         app_mfunctions.classList.add("app-main__functions");
-
+        app_main.appendChild(app_mfunctions);
+        app_mfunctions.classList.add("app-main__functions");
 
 
         app_main.appendChild(app_mfunctions);
@@ -172,49 +171,58 @@ function insertBlock_app(i) {
         app_btn.classList.add("app-main__bin-btn");
         app_btn.innerHTML = "В корзину";
 
-            app_btn.onclick = function () {
+
+
+
+
+
+
+
+        app_btn.onclick = function () {
 
             cart.add(apps[i].id, apps[i].title, apps[i].price);
-           /* console.log(cart);*/
+            /* console.log(cart);*/
 
-
-            var num = cart.cell.length-1;
+            var num = cart.cell.length - 1;
 
             var k = document.querySelector('.table_popup');
-            document.querySelector('.table_popup').insertBefore(t.content.cloneNode(true),document.querySelector('.table__row-02'));
-            document.querySelector('.table__row-02').setAttribute("id","elem"+num);
-            document.querySelector('.table__close_app').setAttribute("id","cb"+num);
+            document.querySelector('.table_popup').insertBefore(t.content.cloneNode(true), document.querySelector('.table__row-02'));
+            document.querySelector('.table__row-02').setAttribute("id", "elem" + num);
+            document.querySelector('.table__close_app').setAttribute("id", "cb" + num);
 
-            var table_id = k.querySelector('#elem'+i);
+            var table_id = k.querySelector('#elem' + i);
             var table_title = k.querySelector('.table__title_app');
             var table_price = k.querySelector('.table__price_app');
             table_title.innerHTML = cart.cell[num].title;
             table_price.innerHTML = cart.cell[num].price;
 
-            var rem_btn = document.querySelector("#cb"+num);
-            rem_btn.onclick = function ()
-            {
-                var elem = document.querySelector("#elem"+num);
+            var rem_btn = document.querySelector("#cb" + num);
+
+            rem_btn.onclick = function () {
+                var elem = document.querySelector("#elem" + num);
                 k.removeChild(elem)
-            }
+            };
 
         }
 
-        app_date.innerHTML = timeConverter(date);
 
-
-        function timeConverter(lastUpdate) {
-            var a = new Date(lastUpdate * 1000);
-            var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-            var year = a.getFullYear();
-            var month = months[a.getMonth()];
-            var date = a.getDate();
-            var time = date + ' ' + month + ' ' + year + ' ';
-            return time;
-        }
 
     }
-};
+
+    function timeConverter(lastUpdate) {
+        var a = new Date(lastUpdate * 1000);
+        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        var year = a.getFullYear();
+        var month = months[a.getMonth()];
+        var date = a.getDate();
+        var time = date + ' ' + month + ' ' + year + ' ';
+        return time;
+    }
+
+
+    app_date.innerHTML = timeConverter(date);
+}
+;
 
 var apps = [];
 var cart;
@@ -222,7 +230,7 @@ var cart;
 
 function getContent() {
 
-/* return new Promise(function(resolve, reject) {*/
+    /* return new Promise(function(resolve, reject) {*/
 
     //console.log("getContent");
 
@@ -235,16 +243,17 @@ function getContent() {
         if (xhr.status === 200) {
             var data = xhr.responseText;
             /*alert(xhr.status + ': ' + xhr.statusText);*/
-           /* resolve(this.response);*/
-      }       /* else {
-        var error = new Error(this.statusText);
-        error.code = this.status;
-        reject(error);
-      }
-    };
-*/
+            /* resolve(this.response);*/
+        }
+        /* else {
+         var error = new Error(this.statusText);
+         error.code = this.status;
+         reject(error);
+         }
+         };
+         */
 
-   /*makeList("api/app_packages.json").then {*/
+        /*makeList("api/app_packages.json").then {*/
 
         apps = JSON.parse(data); //apps - object
         var li = apps.length;
@@ -257,25 +266,24 @@ function getContent() {
         insertBlock_app(0);
 
 
-
-}
+    }
 
     /*    function onload("api/app_packages.json") */
 
 }
 
-        function inStorage() {
-        localStorage.setItem("key", JSON.stringify(cart));
-        }
+function inStorage() {
+    localStorage.setItem("key", JSON.stringify(cart));
+}
 
 
-        function outStorage() {
-                var currentItem = localStorage.getItem('key');
-                outcome = JSON.parse(currentItem);
-                console.log(outcome);
-        }
+function outStorage() {
+    var currentItem = localStorage.getItem('key');
+    outcome = JSON.parse(currentItem);
+    console.log(outcome);
+}
 
-  /*Cart*/
+/*Cart*/
 
 function Cart() {
     this.cell = [];
@@ -292,10 +300,10 @@ Cart.prototype.add = function (id, title, price) {
 
     this.cell.push({id, title, price});
 
-   //console.log(this.cell);
+    //console.log(this.cell);
     k = this.cell.length - 1;
 
-   // console.log(this.cell[k]);
+    // console.log(this.cell[k]);
 
 };
 
@@ -321,25 +329,25 @@ var under = document.querySelector('.underlay');
 var cross_btn = document.querySelector('.popup__cross-btn');
 
 
-cart_btn.onclick = function() {
+cart_btn.onclick = function () {
 
     ouibounce.classList.remove('om');
     ouibounce.classList.remove('fade-out');
     ouibounce.classList.add('fade-in');
 
 
-  inStorage();
-  outStorage()
+    inStorage();
+    outStorage()
 
 
 };
 
-cross_btn.onclick = function() {
+cross_btn.onclick = function () {
     ouibounce.classList.remove('fade-in');
     ouibounce.classList.add('fade-out');
 };
 
-under.onclick = function() {
+under.onclick = function () {
     ouibounce.classList.remove('fade-in');
     ouibounce.classList.add('fade-out');
 };
@@ -353,4 +361,5 @@ var t = document.querySelector('#template_row');
 
 var table_price = document.querySelector('.table__price_app');
 var table_price_overall = document.querySelector('.table__price_app-02');
+
 
