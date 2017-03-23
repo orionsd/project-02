@@ -7,23 +7,6 @@ mainpr_cont.appendChild(slider_mask);
 
 var activeNum = 2;
 
-//console.log(circle_btn);
-
-/*
- var circle_btn_02 = document.getElementsByClassName('circles__item')[1];
- var circle_btn_03 = document.getElementsByClassName('circles__item')[2];
- var circle_btn_04 = document.getElementsByClassName('circles__item')[3];
- var circle_btn_05 = document.getElementsByClassName('circles__item')[4];
- */
-
-/*var packages = [{image: "img/prod-item-01.png", span: "СТАНДАРТНЫЙ ПАКЕТ", time: "08 впреля 2012"},
- {image: "img/prod-item-02.png", span: "НОВЫЙ ЦФТ-БАНК", time: "08 впреля 2012"},
- {image: "img/prod-item-03.png", span: "КАТАЛОГ РАЗРАБОТОК", time: "08 впреля 2012"},
- {image: "img/prod-item-02.png", span: "РАЗРАБОТОК", time: "10"},
- {image: "img/prod-item-01.png", span: "РАЗРАБОТОК", time: "555"},
- {image: "img/prod-item-03.png", span: "РАЗРАБОТОК", time: "777"},
- ];*/
-
 var paths =
 
 {
@@ -171,7 +154,6 @@ circle_btn[4].onclick = function () {
 
 };
 
-
 function circle_toggle() {
 
     for (var i = 1; i < circle_btn.length; i++) {
@@ -192,6 +174,7 @@ function makeMeRed(i) {
 /*console.log(btn_next);*/
 
 /*Ajax*/
+
 
 function getContent() {
 
@@ -215,10 +198,14 @@ function getContent() {
         for (var i = 0; i < li; i++)
             insertBlock(i, apps);
 
-
     };
 
 }
+
+
+
+
+
 
 
 
